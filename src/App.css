@@ -7,6 +7,8 @@
     padding-bottom: 25px;
 }
 .display {
+    margin-left:5%;
+    margin-right:5%;
     margin-top: 25px;
     height: 100px;
     width: 450px;
@@ -19,4 +21,66 @@
     align-items: flex-end;
     padding-right: 8%;
     font-size: 5.0rem;
+  }
+  .btn {
+      margin:5px;
+      height:100px;
+      width:100px;
+      border-radius: 50px;
+      font-size: 2rem;
+      color:white;
+      box-shadow: 0px 3px grey;
+  border: none;
+  }
+  .nums{
+    background: #104E8B;   
+  }
+  .specials {
+      background:#1874CD;
+  }
+  .operators {
+      background: #53868B	;
+  }
+.grid-container {
+    display:grid;
+    justify-content: center;
+    margin:5%;
+    width:90%;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(5, 20%);
+    grid-template-areas:"special special special operator"
+                        "nums nums nums operator"
+                        "nums nums nums operator"
+                        "nums nums nums operator"
+                        "nums nums nums operator";
+    
+}
+.nums-con {
+    grid-area: nums;
+    display:grid;
+    grid-template-columns: repeat(3, 33.333%);
+    grid-template-rows: repeat(4, 25%);
+    place-items: center;
+
+    
+}
+.specials-con {
+    grid-area: special;
+    display:grid;
+    grid-template-columns: repeat(3, 33.333%);
+    place-items: center;
+
+}
+.operators-con {
+    grid-area: operator;
+    display:grid;
+    grid-template-columns: 1 100%;
+    grid-template-rows: repeat(5, 20%);
+    place-items: center;
+
+}
+.btn:nth-child(10) {
+    width:220px;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
