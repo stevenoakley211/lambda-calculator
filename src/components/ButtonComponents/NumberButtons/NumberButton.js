@@ -2,8 +2,7 @@ import React from "react";
 
 
 const NumberButton = props => {
-  return <button className="btn nums"
-  onClick={() => props.setSelectedButton(props.numbers)} 
+  return <button  onClick={() => props.changeNumber(props.numbers)}className="btn nums" 
   >{props.numbers}</button>
   
 };

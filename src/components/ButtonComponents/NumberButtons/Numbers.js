@@ -9,10 +9,9 @@ import { numbers } from '../../../data'
 */
 //Import your array data to from the provided data file
 
-const Numbers = () => {
-  const [selectedButton, setSelectedButton] = useState(0);
-  let [data] = useState(numbers)
-  console.log(selectedButton)
+const Numbers = props => {
+  const [data,setData] = useState(numbers)
+  // console.log(selectedButton)
   return (
     <div className="nums-con">
       {data.map((numbers, index) =>{
@@ -20,7 +19,7 @@ const Numbers = () => {
           <NumberButton
           numbers={numbers}
           key={index}
-          setSelectedButton ={setSelectedButton}
+          changeNumber ={props.changeNumber}
           />
         )
       })/* STEP 3 - Use .map() to iterate over your array data and return a button
